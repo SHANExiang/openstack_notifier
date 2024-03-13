@@ -1,0 +1,24 @@
+# ecs console service
+ECS:
+  NovaURL: sbx-jovian-integration-service.voneyun.com
+  CinderURL: sbx-bolide-integration-service.voneyun.com
+  NeutronURL: sbx-nebula-integration-service.voneyun.com
+  ComputeURL: sbx-jovian-integration-service.voneyun.com
+
+# zap logger configuration
+zap:
+  level: debug
+  format: console
+  prefix: ""
+  director: /service/logs/sbx/nonick/nonick-notifier-service/collect/
+  show-line: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+  max-age: 7
+
+# app configuration
+App:
+  HttpPort: 80
+  ReadTimeout: 120s
+  WriteTimeout: 120s
